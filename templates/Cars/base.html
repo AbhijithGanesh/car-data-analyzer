@@ -1,0 +1,133 @@
+{%load static%}
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <Title>{{data}} HTML</Title>
+    <link rel= "icon" src="https://img.icons8.com/carbon-copy/100/000000/car--v1.png">
+    <link rel = "stylesheet" href = "{%static 'css/bs.css'%}">
+    <link rel="stylesheet" href="{%static 'css/w3s.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+    <link href = "{%static 'css/base.css'%}" rel = "stylesheet"/>
+</HEAD>
+<BODY>  
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a href='Harrier' class="w3-bar-item w3-button w3-padding-large"><H4 class = "TitleFont">HARRIER</H4></a>
+            <a href="Hector" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><h4  class = "TitleFont">HECTOR</h4></a>
+          <a href="Fortuner" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><H4  class = "TitleFont">FORTUNER</H4></a>
+          <a href="XUV500" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><H4  class = "TitleFont">XUV500</H4></a>
+          <a href="Seltos" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><H4  class = "TitleFont">SELTOS</H4></a>
+            <a class="w3-padding-large w3-hover-red w3-hide-small w3-right" href = "/"><h3 class = "Designer">TEAM MSAGSM</h3></a>
+          </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-2">
+            <div class = "hidden">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias bus asperiores repellat.
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-8">
+            <div class = "hidden">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias bus asperiores repellat.
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias bus asperiores repellat.
+            At vero eos Ot
+            </div> 
+            <div class = "TheTitle">
+                  {{data}}
+            </div>
+            <div class = "Image">
+                <img src = {{image}}>
+            </div>
+            <br>
+            <div class = "TheTitle">
+                Analysis of Car Data:
+            </div>
+            <div class = "A1">
+               Car Rating Score - This score has been evaluated using our algorithm, this score rates the car's performance and the driver's performance for the given data sample.
+               There will be five scores reported in this page:
+                <ol>
+                  <li>Average Performance Rating</li>
+                  <li>Average Mileage</li>
+                  <li>Average Battery Drain per Kilometer</li>
+                  <li>Engine Temperature Gradient</li>
+                  <li>Average Brake stress</li>
+                </ol>
+            </div>
+            <br>
+            <div class = "TheTitle">
+              Average Performance Rating
+            </div>
+              <div>
+                From the 360+ Readings, The average Performance Rating has been calculated from the data present in our database.
+                The Average Score of {{Car_Name}} is  <em><b><u>{{Car_Score}}</em></b></u>
+              </div>
+            <br>
+            <div class = "TheTitle">
+              Average Mileage
+            </div>
+            <div>
+              From our recordings, We have calculated the mileage for {{Car_Name}} .
+              The recorded mileage is <em><b><u>{{Car_Mileage}}</em></b></u> Kilometers per Litre
+            </div>
+            <br>
+
+            <div class = "TheTitle">
+              Engine Temperature Gradient
+            </div>
+            
+            <div>
+              This is the measure of Engine Temperature over a certain distance, it is calculated by finding the Temperature Difference in a given frame where a constant amount of distance is covered.
+              <br>
+              The Engine Temperature gradient for {{Car_Name}} is <em><b><u>{{Gradient}}</em></b></u>
+            </div>
+
+            <br>
+            <div class = "TheTitle">
+              Gear-RPM Correlation
+            </div>
+            <div>
+              This is determined by the established relation where Gear and RPM is mapped. If the Correlation scores have a relatively large difference then it denotes that the usage of gear-shift was not ideal.
+              <br>
+              The ideal range's average i.e. the average of the upper and lower bound, Gears 1 to 5 have been displayed respectively.
+            <table>
+            <br>
+            <br>
+             {%for var1,var2 in rpmdata.items%}
+                <tr><td><ul> <li>Ideal Value for Gear : <em><b><u>{{var1}} RPM</em></b></u> and the recorded value is <b><u><em>{{var2}} RPM</b></em></u></li></ul></td></tr>
+              {%endfor%}
+            </table>
+            <br>
+            <div class = "TheTitle">
+              Average Brake Stress
+            </div>
+            <div>
+              The recordings from the brake are used to calculate this measure, we estimated average brake stress by averaging the  brake force per unit area.
+              Average Brake stress for this car  is <em><b><u>{{Brake_Stress}} Pa</em></b></u>
+            </div>
+             <br>
+            <hr>
+            <footer>
+            <p>Team MSAGSM | Designed by : Abhijith G
+            <br>
+            Contact  : <a href = "https://www.linkedin.com/in/abhijith-ganesh-1811a91a9/">Click Here<a></p>
+            <br>
+            click on the Team MSAGSM icon on Header to go back to home page.
+           </footer> 
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+</BODY>
+</HTML>

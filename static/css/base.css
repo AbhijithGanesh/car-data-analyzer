@@ -1,0 +1,57 @@
+html{
+    background-color: #0d0d0d;
+}
+.navbar {
+    color:#0a0a23  !important;
+}
+.TitleFont{
+    font-family: 'Orelega One', cursive  !important;
+}
+.Designer{
+    font-family: 'Crimson Text', serif!important;
+}
+.design{
+    color:white;
+    font-family: 'Play', sans-serif;
+    font-size: large;
+}
+.font{
+    font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif  !important;
+    letter-spacing: -0.011em;
+    font-size: 28px;
+    line-height: 56px;
+    font-weight: 400;
+    background-color: black;
+
+}   
+
+.row {
+    background-color: #0d0d0d ;
+}
+.hidden{
+    color: #0d0d0d;
+}
+.TheTitle{
+    font-family: 'Zen Dots', cursive  !important;
+    color:aliceblue !important;
+    font-size: x-large;
+
+}
+.SideLines{
+    font-family: 'Architects Daughter', cursive !important;
+    color: #005cab;
+    position: fixed; 
+    font-size: 2rem !important;
+}
+img{
+    height: 450px !important;
+    width: 950px !important;
+}
+a :hover{
+    color: #000066 !important; 
+}
+footer {
+    color:aliceblue;
+    font-family: 'Permanent Marker', cursive;
+    font-size:large;
+}

@@ -1,0 +1,15 @@
+.menu{
+    text-decoration:none;
+    text-align: center;
+}
+.menu ul li:hover{
+    background-color: #521499;
+}
+.menu ul li{
+    display: inline-block;
+    width: 200px;
+    text-align:left ;
+    padding: left 10px;
+    border:5px;
+    background-color: black;
+}
